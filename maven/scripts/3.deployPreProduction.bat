@@ -18,6 +18,8 @@ if errorLevel 1 goto errorDevelop
 call mvn -Dmaven.test.skip=true install -Denvironment.type=preproduction
 if errorLevel 1 goto errorPreproduction
 
+::call mvn tomcat7:redeploy -Denvironment.type=preproduction
+
 call mvn verify -Denvironment.type=preproduction 
 
 pause
