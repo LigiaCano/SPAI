@@ -10,3 +10,7 @@ echo .
 cd %workspace%
 call mvn clean
 pause
+call mvn compile
+pause
+call mvn test
+pause
