@@ -8,9 +8,14 @@ echo Workspace --- %workspace%
 echo .
 echo .
 cd %workspace%
+echo ============ mvn clean
 call mvn clean
 pause
+echo .
+echo ============ mvn compile
 call mvn compile
 pause
+echo .
+echo ============ mvn test
 call mvn test
 pause
