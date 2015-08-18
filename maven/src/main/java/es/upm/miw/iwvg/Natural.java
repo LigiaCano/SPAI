@@ -12,10 +12,8 @@ public class Natural {
     }
 
     public int duplex() {
-        LogManager.getLogger(this.getClass()).debug("Value:" + value);
-        LogManager.getLogger(this.getClass()).info("Value:" + value);
-        LogManager.getLogger(this.getClass()).error("Value:" + value);
-        return value * 2;
+        LogManager.getLogger(this.getClass()).debug(">>>>>> Value:" + value);
+        return value * 22;
     }
 
     public int getValue() {

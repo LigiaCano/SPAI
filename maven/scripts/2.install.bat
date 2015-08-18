@@ -10,13 +10,14 @@ echo .
 
 cd %workspace%
 :: -ff, --fail-fast. Stop at first failure in reactorized builds. Línea de comentario
-echo ============ mvn -ff clean test (profile: develop)
-call mvn -ff clean test 
+echo ============ mvn -ff clean test (profile: preproduction)
+call mvn -ff clean test -Denvironment.type=preproduction
 if errorLevel 1 goto errorDevelop
 
+echo .
 :: -Dmaven.test.skip=true. To skip running the tests for a particular project
-echo ============ call mvn -Dmaven.test.skip=true install -Denvironment.type=preproduction (profile: preproduction)
-call mvn -Dmaven.test.skip=true install -Denvironment.type=preproduction
+echo ============ call mvn -Dmaven.test.skip=true install -Denvironment.type=production (profile: production)
+call mvn -Dmaven.test.skip=true install -Denvironment.type=production
 
 pause
 exit
