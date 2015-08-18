@@ -15,8 +15,51 @@
 		<jdk.version>1.8</jdk.version>
 		<junit.version>4.11</junit.version>
 		<log4j.version>2.2</log4j.version>
-		<maven.compiler.version>3.0</maven.compiler.version>
+		<maven.compiler.version>3.3</maven.compiler.version>
 	</properties>
+
+	<profiles>
+		<!-- Maven will apply this by default as we set in $HOME/.m2/settings.xml -->
+		<!-- Default: -Denvironment.type=develop -->
+		<profile>
+			<id>develop</id>
+			<activation>
+				<property>
+					<name>environment.type</name>
+					<value>develop</value>
+				</property>
+			</activation>
+			<properties>
+				<logs.level.root>debug</logs.level.root>
+			</properties>
+		</profile>
+		<!-- mvn install -Denvironment.type=preproduction -->
+		<profile>
+			<id>preproduction</id>
+			<activation>
+				<property>
+					<name>environment.type</name>
+					<value>preproduction</value>
+				</property>
+			</activation>
+			<properties>
+				<logs.level.root>info</logs.level.root>
+			</properties>
+		</profile>
+		<!-- mvn install -Denvironment.type=production -->
+		<profile>
+			<id>production</id>
+			<activation>
+				<property>
+					<name>environment.type</name>
+					<value>production</value>
+				</property>
+			</activation>
+			<properties>
+				<logs.level.root>error</logs.level.root>
+			</properties>
+		</profile>
+	</profiles>
 
 	<dependencies>
 		<!-- Logs -->
@@ -43,6 +86,12 @@
 		</dependency>
 	</dependencies>
 	<build>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
