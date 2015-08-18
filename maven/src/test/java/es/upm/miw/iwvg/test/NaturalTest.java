@@ -1,9 +1,11 @@
-package es.upm.miw.iwvg;
+package es.upm.miw.iwvg.test;
 
 import static org.junit.Assert.*;
 
 import org.junit.Before;
 import org.junit.Test;
+
+import es.upm.miw.iwvg.test.Natural;
 
 public class NaturalTest {
 

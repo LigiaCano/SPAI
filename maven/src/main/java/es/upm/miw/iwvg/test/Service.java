@@ -1,4 +1,4 @@
-package es.upm.miw.iwvg;
+package es.upm.miw.iwvg.test;
 
 public class Service {
 

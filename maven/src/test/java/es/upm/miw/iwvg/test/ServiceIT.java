@@ -1,8 +1,10 @@
-package es.upm.miw.iwvg;
+package es.upm.miw.iwvg.test;
 
 import static org.junit.Assert.*;
 
 import org.junit.Test;
+
+import es.upm.miw.iwvg.test.Service;
 
 public class ServiceIT {
 
