@@ -5,7 +5,12 @@ import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;
 
 @RunWith(Suite.class)
-@SuiteClasses({DecimalCollectionTest.class, FractionTest.class, PointTest.class, UserTest.class})
+@SuiteClasses({
+    PointTest.class, 
+    //DecimalCollectionTest.class,
+    //FractionTest.class,
+    //UserTest.class
+})
 public class AllTests {
 
 }
