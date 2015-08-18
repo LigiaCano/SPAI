@@ -8,6 +8,7 @@ echo Workspace --- %workspace%
 echo .
 echo .
 cd %workspace%
-echo ============ mvn --version
+echo ============ mvn --version =======================================================
+echo .
 call mvn --version
 pause

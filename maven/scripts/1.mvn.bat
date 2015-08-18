@@ -7,11 +7,13 @@ echo .
 echo Workspace --- %workspace%
 echo .
 cd %workspace%
-echo ============ mvn clean (profile: develop)
+echo ============ mvn clean (profile: develop) =======================================================
+echo .
 call mvn clean
 pause
 echo .
-echo ============ mvn clean test (profile: develop)
+echo ============ mvn clean test (profile: develop) =======================================================
+echo .
 call mvn clean test
 pause
 

@@ -13,7 +13,7 @@ public class Natural {
 
     public int duplex() {
         LogManager.getLogger(this.getClass()).debug(">>>>>> Value:" + value);
-        return value * 22;
+        return value * 2;
     }
 
     public int getValue() {
