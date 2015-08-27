@@ -1,5 +1,5 @@
 @echo off
-set workspace=C:\DatosJBB\Workspaces\Workspace.Eclipse.JEE.Luna\miw.spai\maven
+set workspace=C:\DatosJBB\Workspaces\Workspace.Eclipse.JEE.Luna\SPAI\maven
 echo -----------------------------------------
 echo . Deploy Pre Production (C) MIW
 echo -----------------------------------------
