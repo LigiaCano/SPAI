@@ -11,6 +11,6 @@ import org.junit.runners.Suite.SuiteClasses;
     //FractionTest.class,
     //UserTest.class
 })
-public class AllTests {
+public class AllIwvgJunitTests {
 
 }
