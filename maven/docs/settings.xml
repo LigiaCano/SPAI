@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- $HOME/.m2/settings.xml We set 3 profiles: dev, preproduction and production 
+<!-- $HOME/.m2/settings.xml We set 3 profiles: develop, preproduction and production 
 	To check active profiles, in a project folder we run mvn help:active-profiles 
 	Now in our pom.xml we can add profiles with their own properties like database 
 	settings -->
