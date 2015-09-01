@@ -4,12 +4,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class DecimalCollection {
-    
+
     private List<Double> collection;
 
     public DecimalCollection() {
         this.collection = new ArrayList<Double>();
-    } 
+    }
 
     public void add(double value) {
         this.collection.add(value);
@@ -30,8 +30,9 @@ public class DecimalCollection {
     public double higher() {
         double higher = Double.NEGATIVE_INFINITY;
         for (double item : this.collection) {
-            if (item > higher)
+            if (item > higher) {
                 higher = item;
+            }
         }
         return higher;
     }

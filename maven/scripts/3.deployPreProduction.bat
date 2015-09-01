@@ -11,16 +11,22 @@ echo .
 cd %workspace%
 :: Test en Develop
 :: -ff, --fail-fast. Stop at first failure in reactorized builds
+echo ============ mvn -ff clean test (profile: develop) =======================================================
+echo .
 call mvn -ff clean test
 if errorLevel 1 goto errorDevelop
 
 :: Install en Pre-Production
-call mvn -Dmaven.test.skip=true install -Denvironment.type=preproduction
+echo ============ mvn -Dmaven.test.skip=true package -Denvironment.type=preproduction =======================================================
+echo .
+call mvn -Dmaven.test.skip=true package -Denvironment.type=preproduction
 if errorLevel 1 goto errorPreproduction
 
-::call mvn tomcat7:redeploy -Denvironment.type=preproduction. !!!Comentado, todavía no preparado
+::call mvn -Dmaven.test.skip=true tomcat7:redeploy -Denvironment.type=preproduction. !!!Comentado, todavía no preparado
 
-call mvn verify -Denvironment.type=preproduction 
+echo ============ mvn -Dmaven.test.skip=true verify -Denvironment.type=preproduction  =======================================================
+echo .
+call mvn -Dmaven.test.skip=true verify -Denvironment.type=preproduction 
 if errorLevel 1 goto errorPreproduction
 
 pause

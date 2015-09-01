@@ -11,12 +11,20 @@
 	<name>${project.groupId}.${project.artifactId}</name>
 
 	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<!-- A las propiedades se accede mediante ${...}, Ej. ${log4j.version} -->
+		<encoding>UTF-8</encoding>
+		<project.build.sourceEncoding>${encoding}</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>${encoding}</project.reporting.outputEncoding>
+		<project.resources.sourceEncoding>${encoding}</project.resources.sourceEncoding>
 		<jdk.version>1.8</jdk.version>
 		<junit.version>4.11</junit.version>
 		<log4j.version>2.2</log4j.version>
 		<maven.compiler.version>3.3</maven.compiler.version>
+		<!-- test de Integración -->
 		<maven.failsafe.version>2.12</maven.failsafe.version>
+		<!-- Data Base -->
+		<database.driver>com.mysql.jdbc.Driver</database.driver>
+		<database.url>jdbc:mysql://localhost:3306/spai</database.url>
 	</properties>
 
 	<profiles>
@@ -32,6 +40,8 @@
 			</activation>
 			<properties>
 				<logs.level.root>debug</logs.level.root>
+                <database.user>root</database.user>
+                <database.password></database.password>
 			</properties>
 		</profile>
 		<!-- mvn install -Denvironment.type=preproduction -->
@@ -45,6 +55,8 @@
 			</activation>
 			<properties>
 				<logs.level.root>info</logs.level.root>
+                <database.user>myUser</database.user>
+                <database.password>myPass</database.password>
 			</properties>
 		</profile>
 		<!-- mvn install -Denvironment.type=production -->
@@ -58,6 +70,8 @@
 			</activation>
 			<properties>
 				<logs.level.root>error</logs.level.root>
+                <database.user>otherUser</database.user>
+                <database.password>otherPass</database.password>
 			</properties>
 		</profile>
 	</profiles>
@@ -88,6 +102,7 @@
 	</dependencies>
 	<build>
 		<resources>
+			<!-- Es para que cambie los valores de los ficheros de propiedades -->
 			<resource>
 				<directory>src/main/resources</directory>
 				<filtering>true</filtering>
@@ -118,12 +133,18 @@
 						<goals>
 							<goal>integration-test</goal>
 						</goals>
+						<configuration>
+							<skip>false</skip>
+						</configuration>
 					</execution>
 					<execution>
 						<id>verify</id>
 						<goals>
 							<goal>verify</goal>
 						</goals>
+						<configuration>
+							<skip>false</skip>
+						</configuration>
 					</execution>
 				</executions>
 			</plugin>
