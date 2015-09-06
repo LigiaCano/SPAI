@@ -1,0 +1,80 @@
+# SPAI: ECP2
+## Descripción del proyecto
+Se parte de un proyecto ya desarrollado, y se pretende realizar una ampliación del mismo.
+
+En la actualidad, el proyecto consta de cuatro clases:
+* **Point**, maneja coordenadas de dos dimensiones, ofreciendo diversas funcionalidades
+* **User**, almacena un identificador, el nombre y apellido, controlando el formato del mismo y mostrando diferentes representaciones
+* **DecimalCollection**, maneja una colección de valores decimales de tipo double
+* **Fraction**, maneja fracciones matemáticas
+
+**Es responsabilidad del arquitecto realizar los test de cada clase en su versión inicial**
+
+####Las posibles ampliaciones podrían ser las siguientes:####
+
+##### Point
+* Aumentar a una tercera coordenada
+* Limitar los límites posibles: 0..100, -10..+10 ...
+* Poder modificar las coordenadas
+
+##### User
+* Presentar el nombre en mayúsculas 
+* Incluir métodos con otras formas de presentar el nombre completo
+* Permitir nombres compuestos, separados por blancos y controlar las mayúsculas y minúsculas
+
+##### DecimalCollection
+* Incluir métodos como *menor*, *multiplicar*, *tamaño*, *media*...
+
+##### Fraction
+* Incluir métodos como *isPropia*, *isImpropia*. Las fracciones propias son aquellas cuyo numerador es menor que el denominador, y las fracciones impropias el resto
+* Incluir el método *isEquivalente*. Dos fracciones son equivalentes cuando el producto de extremos es igual al producto de medios
+* Incluir métodos para comparar fracciones: *mayor*, *menor*
+* Incluir métodos para *sumar*, *restar*, *multiplicar* o *dividir* fracciones
+
+Se pueden realizar otras, pero cuidado!!! es responsabilidad del `Arquitecto` finalizar la ampliación del proyecto **:-o**.
+
+####Tickets
+Los tickets se publicarán con el título: **issuesXxx#n** (siendo **Xxx** un identificador: **Dev**: develop, **Bug**: bugs... y **n** un número correlativo) y una pequeña descripción del mismo, tendrán un enlace a una página **wiki**, con el mismo nombre, que lo describe con detalle. Deberán tener plazos temporales y estimaciones de tiempo (**1 unidad equivale a 5 minutos**). Cuando un `Programador` finalice,  incluirá el tiempo real utilizado.
+
+*No olvidéis, si con tanto cambio se produce* **descontrol y pánico!!!** *enfocar un* **commit estable**, *hacer* **reset** *mediante el menú contextual y marcar* **Hard**
+
+## Pasos a seguir
+### Fase 1. Integrantes de los proyectos
+Sorteo para asignar a cada `Arquitecto` su equipo de tres `Programadores`
+### Fase 2. Preparar proyecto en el repositorio
+El `Arquitecto` deberá preparar una copia del proyecto en su cuenta de GitHub.
+
+1. Clonará el repositorio (https://github.com/miw-upm/ECP2.git) en su cuenta, con el botón `Fork` de la Web de GitHub
+1. Le cambiará el nombre del repositorio copiado a ***ECP2Arquitecto***
+1. Añadirá como colaboradores del proyecto a su la lista de `Programadores`
+1. Importará este proyecto en su equipo local, y le cambiará el nombre del proyecto (*Refactor>Rename*): ***ECP2Arquitecto***
+1. Deberá añadir los test de cada clase y comprobar su buen funcionamiento
+1. Actualizará el repositorio remoto
+1. Publicará en la plataforma de la ***moodle.upm*** los datos del proyecto, en el apartado GitHubs de la asignatura
+
+### Fase 3. Preparar proyectos en equipos locales
+Los `Programadores` importarán este proyecto en sus equipos.
+
+### Fase 4. Planificación de la ampliación por parte de Arquitecto
+El `Arquitecto` establecerá UNA ampliación para las clases Point, User y DecimalCollection, y TRES ampliaciones para Fraction.
+Recordar que **no podrá realizar ninguna modificación directa del software**, pero si puede realizar tareas de preparación de ramas, fusiones, generaciones de Tags, generación del Jar...
+
+### Fase 5. Programar los test
+1. El `Arquitecto` mandará tickets a cada `Programador` para explicar las ampliaciones que se deben acometer, y el test asignado: *PointTest*, *UserTest*, *DecimalCollectionTest* y *FractionTest*. Los programadores tendrán que realizar los test e incluir el método público en las clases.
+1. Los `Programadores` cerrarán los tickets cuando hayan finalizado
+
+### Fase 6. Programar las clases
+
+1. El `Arquitecto` mandará tickets para implementar las clases, el **programador que hace el test no puede implementar la clase**, excepto *Fraction*, que se asignará un método a cada `Programador`
+1. El `Programador` realizará los tickets con agilidad y corrección. Una vez que termine, deberá cerrarlo indicando el tiempo  real ocupado
+
+### Fase 7. Comprobación final del proyecto
+1. EL `Arquitecto` comprobará el buen funcionamiento de la ampliación. Si tuviera errores, creará nuevos tickets.
+1. Finaliza la ampliación, creando una versión beta para publicar
+
+## Evaluación
+La nota que se obtiene en este ejercicio es de 7 puntos por el rol de `Arquitecto` y 3 puntos por el rol de `Programador`.
+El `Arquitecto` deberá dar una nota entre 0..1 a cada uno de los programadores. Se indicará en la entrega de la práctica.
+Se valorará el uso adecuado de las ramas, el uso de los tickets, de la wiki, la coordinación...
+
+### Suerte chic@s!!!
