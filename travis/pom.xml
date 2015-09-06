@@ -3,7 +3,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
 	<modelVersion>4.0.0</modelVersion>
-	<artifactId>git</artifactId>
+	<artifactId>travis</artifactId>
 	<groupId>es.upm.miw</groupId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
@@ -11,7 +11,10 @@
 	<name>${project.groupId}.${project.artifactId}</name>
 
 	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<encoding>UTF-8</encoding>
+		<project.build.sourceEncoding>${encoding}</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>${encoding}</project.reporting.outputEncoding>
+		<project.resources.sourceEncoding>${encoding}</project.resources.sourceEncoding>
 		<jdk.version>1.8</jdk.version>
 		<junit.version>4.11</junit.version>
 		<log4j.version>2.2</log4j.version>
@@ -118,12 +121,18 @@
 						<goals>
 							<goal>integration-test</goal>
 						</goals>
+						<configuration>
+							<skip>false</skip>
+						</configuration>
 					</execution>
 					<execution>
 						<id>verify</id>
 						<goals>
 							<goal>verify</goal>
 						</goals>
+						<configuration>
+							<skip>false</skip>
+						</configuration>
 					</execution>
 				</executions>
 			</plugin>
