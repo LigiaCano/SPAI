@@ -7,6 +7,7 @@ public class NaturalDao {
     }
     
     public Natural findOne(Integer id){
+        //Se recupera de la BD
         return null;
     }
 
