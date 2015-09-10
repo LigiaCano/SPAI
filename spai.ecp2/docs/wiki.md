@@ -33,8 +33,8 @@ En la actualidad, el proyecto consta de cuatro clases:
 
 Se pueden realizar otras, pero cuidado!!! es responsabilidad del `Arquitecto` finalizar la ampliación del proyecto **:-o**.
 
-####Tickets
-Los tickets se publicarán con el título: **issuesXxx#n** (siendo **Xxx** un identificador: **Dev**: develop, **Bug**: bugs... y **n** un número correlativo) y una pequeña descripción del mismo, tendrán un enlace a una página **wiki**, con el mismo nombre, que lo describe con detalle. Deberán tener plazos temporales y estimaciones de tiempo (**1 unidad equivale a 5 minutos**). Cuando un `Programador` finalice,  incluirá el tiempo real utilizado.
+####Features
+Las mejoras se publicarán con un formato a elección del `Arquitecto`, y deberá describirlo en la Wiki. Deberán tener plazos temporales.
 
 *No olvidéis, si con tanto cambio se produce* **descontrol y pánico!!!** *enfocar un* **commit estable**, *hacer* **reset** *mediante el menú contextual y marcar* **Hard**
 
@@ -42,12 +42,12 @@ Los tickets se publicarán con el título: **issuesXxx#n** (siendo **Xxx** un id
 ### Fase 1. Integrantes de los proyectos
 Sorteo para asignar a cada `Arquitecto` su equipo de tres `Programadores`
 ### Fase 2. Preparar proyecto en el repositorio
-El `Arquitecto` deberá preparar una copia del proyecto en su cuenta de GitHub.
+El `Arquitecto` deberá preparar el proyecto en su cuenta de GitHub.
 
-1. Clonará el repositorio (https://github.com/miw-upm/ECP2.git) en su cuenta, con el botón `Fork` de la Web de GitHub
-1. Le cambiará el nombre del repositorio copiado a ***ECP2Arquitecto***
+1. Se llamará ***SpaiEcp2Arquitecto***
 1. Añadirá como colaboradores del proyecto a su la lista de `Programadores`
-1. Importará este proyecto en su equipo local, y le cambiará el nombre del proyecto (*Refactor>Rename*): ***ECP2Arquitecto***
+1. Creará el proyecto en local y lo subirá a Git, no subir los ficheros de configuración de Eclipse!!!
+1. Organizará la forma de gestionar el proyecto: creará etiquetas, establecerá el formato de las mejoras... 
 1. Deberá añadir los test de cada clase y comprobar su buen funcionamiento
 1. Actualizará el repositorio remoto
 1. Publicará en la plataforma de la ***moodle.upm*** los datos del proyecto, en el apartado GitHubs de la asignatura
@@ -56,20 +56,14 @@ El `Arquitecto` deberá preparar una copia del proyecto en su cuenta de GitHub.
 Los `Programadores` importarán este proyecto en sus equipos.
 
 ### Fase 4. Planificación de la ampliación por parte de Arquitecto
-El `Arquitecto` establecerá UNA ampliación para las clases Point, User y DecimalCollection, y TRES ampliaciones para Fraction.
-Recordar que **no podrá realizar ninguna modificación directa del software**, pero si puede realizar tareas de preparación de ramas, fusiones, generaciones de Tags, generación del Jar...
+El `Arquitecto` establecerá **DOS** ampliación para las clases Point, User y DecimalCollection, y **TRES** ampliaciones para Fraction. Cada ampliación de clase debe ir acompañada con sus ampliaciones de test y su explicación en la wiki.
 
-### Fase 5. Programar los test
-1. El `Arquitecto` mandará tickets a cada `Programador` para explicar las ampliaciones que se deben acometer, y el test asignado: *PointTest*, *UserTest*, *DecimalCollectionTest* y *FractionTest*. Los programadores tendrán que realizar los test e incluir el método público en las clases.
-1. Los `Programadores` cerrarán los tickets cuando hayan finalizado
+### Fase 5. Crear tickets
+1. El `Arquitecto` mandará `tickets` para implementar las mejoras
+1. El `Programador` realizará los `tickets` con agilidad y corrección. Una vez que termine, deberá pasar los test, y si no hay errores, realizar la fusión con la rama `develop`. Finalmente cerrará el `ticket`
 
-### Fase 6. Programar las clases
-
-1. El `Arquitecto` mandará tickets para implementar las clases, el **programador que hace el test no puede implementar la clase**, excepto *Fraction*, que se asignará un método a cada `Programador`
-1. El `Programador` realizará los tickets con agilidad y corrección. Una vez que termine, deberá cerrarlo indicando el tiempo  real ocupado
-
-### Fase 7. Comprobación final del proyecto
-1. EL `Arquitecto` comprobará el buen funcionamiento de la ampliación. Si tuviera errores, creará nuevos tickets.
+### Fase 6. Comprobación final del proyecto
+1. El `Arquitecto` comprobará el buen funcionamiento de la ampliación. Si tuviera errores, creará nuevos tickets.
 1. Finaliza la ampliación, creando una versión beta para publicar
 
 ## Evaluación
