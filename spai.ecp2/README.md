@@ -26,4 +26,4 @@ Mirar en la [wiki][] del proyecto
 
 *&copy;Jesús Bernal Bermúdez*.
 
- [wiki]: https://github.com/miw-upm/ECP2/wiki
+ [wiki]: https://github.com/miw-upm/SPAI/wiki/Ecp2
