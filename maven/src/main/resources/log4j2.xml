@@ -20,7 +20,7 @@
 	<loggers>
 		<root level="${logs.level.root}">
 			<AppenderRef ref="Console" />
-			<appenderRef ref="File" />
+			<appenderRef ref="RollingFile" />
 		</root>
 	</loggers>
 </configuration> 

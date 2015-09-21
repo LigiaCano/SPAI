@@ -6,7 +6,7 @@ public class Service {
 
     public Service() {
         // Obtener valor
-        // value="";
+        value="";
     }
 
     public Object getValue() {
