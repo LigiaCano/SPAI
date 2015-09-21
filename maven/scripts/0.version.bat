@@ -1,12 +1,14 @@
 @echo off
 set workspace=C:\DatosJBB\Workspaces\Workspace.Eclipse.JEE.Luna\SPAI\maven
-set PATH=%PATH%
+set PATH=%PATH%C:\Archivos_de_programa_Portables\apache-maven-3.3.1\bin
+set M2_HOME=C:\Archivos_de_programa_Portables\apache-maven-3.3.1
 echo -----------------------------------------
-echo . Test (C) MIW
+echo . (C) MIW
 echo -----------------------------------------
 echo .
 echo Workspace --- %workspace%
 echo .
+echo path --- %path%
 echo .
 cd %workspace%
 echo ============ mvn --version =======================================================
