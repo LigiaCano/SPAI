@@ -40,17 +40,20 @@ Las mejoras se publicarán con un formato a elección del `Arquitecto`, y deber�
 
 ## Pasos a seguir
 ### Fase 1. Integrantes de los proyectos
-Sorteo para asignar a cada `Arquitecto` su equipo de tres `Programadores`
+Sorteo para asignar a cada `Arquitecto` su equipo de tres `Programadores`. Incluir en la plataforma los datos menos el repositorio.
+
 ### Fase 2. Preparar proyecto en el repositorio
 El `Arquitecto` deberá preparar el proyecto en su cuenta de GitHub.
 
 1. Se llamará ***SpaiEcp2Arquitecto***
-1. Añadirá como colaboradores del proyecto a su la lista de `Programadores`
-1. Creará el proyecto en local y lo subirá a Git, no subir los ficheros de configuración de Eclipse!!!
+1. Creará el proyecto en local y lo subirá a Git, no subir los ficheros de configuración de Eclipse!!!. en el primer commit incluir en el mensaje el nombre del arquitecto
 1. Organizará la forma de gestionar el proyecto: creará etiquetas, establecerá el formato de las mejoras... 
 1. Deberá añadir los test de cada clase y comprobar su buen funcionamiento
 1. Actualizará el repositorio remoto
+1. Configurará el proyecto para trabajar con Travis CI
 1. Publicará en la plataforma de la ***moodle.upm*** los datos del proyecto, en el apartado GitHubs de la asignatura
+1. Añadirá como colaboradores del proyecto a su la lista de `Programadores`
+
 
 ### Fase 3. Preparar proyectos en equipos locales
 Los `Programadores` importarán este proyecto en sus equipos.
@@ -59,7 +62,7 @@ Los `Programadores` importarán este proyecto en sus equipos.
 El `Arquitecto` establecerá **DOS** ampliación para las clases Point, User y DecimalCollection, y **TRES** ampliaciones para Fraction. Cada ampliación de clase debe ir acompañada con sus ampliaciones de test y su explicación en la wiki.
 
 ### Fase 5. Crear tickets
-1. El `Arquitecto` mandará `tickets` para implementar las mejoras
+1. El `Arquitecto` mandará `tickets` para implementar las mejoras. Procurará que sea equitativo el trabajo de los `programadores`
 1. El `Programador` realizará los `tickets` con agilidad y corrección. Una vez que termine, deberá pasar los test, y si no hay errores, realizar la fusión con la rama `develop`. Finalmente cerrará el `ticket`
 
 ### Fase 6. Comprobación final del proyecto
