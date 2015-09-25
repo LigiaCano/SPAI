@@ -13,6 +13,7 @@ cd %workspace%
 echo ============ mvn --version =======================================================
 echo .
 call mvn --version
+call mvn clean package
 pause
 ::Se queda la consola abierta para realizar comandos en línea
 ::cmd /k
